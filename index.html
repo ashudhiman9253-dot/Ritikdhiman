@@ -1,109 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            margin-top: 1rem;
-        }
-        nav a {
-            color: white;
-            margin: 0 1rem;
-            text-decoration: none;
-        }
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .project {
-            background: white;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex: 1 1 300px;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #333;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    #hero {
+      background: linear-gradient(to right, #00bcd4, #007bff);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero-content h2 span {
+      color: #ffe082;
+    }
+
+    .btn {
+      background: white;
+      color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #007bff;
+      color: white;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: white;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      margin: 0 auto;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .projects-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Ritik Kumar</h1>
-        <p>Web Developer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1 class="logo">Ritik Dhiman</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section id="hero" class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I create amazing web experiences.</p>
-    </section>
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Hello </h2>
+      <h3><span>I'am Ritik Dhiman</span></h3>
+      <p>A passionate Web Developer / Designer.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate web developer with experience in HTML, CSS, JavaScript, and more. I love building user-friendly websites.</p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width:600px;margin:20px auto;">
+      I'm a web developer who loves building clean and user-friendly websites.
+      Skilled in HTML, CSS, JavaScript. Always eager to
+      learn and explore new technologies.
+    </p>
+  </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>A cool web app.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Another awesome project.</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Innovative solution.</p>
-            </div>
-        </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x200" alt="Project 1">
+        <h3>Calculator</h3>
+        <p>Create a calculator using HTML,CSS,JS.</p>
+        <a href="calculator.html" class="btn">View</a>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x200" alt="Project 2">
+        <h3>Digital Clock</h3>
+        <p>Create a digital clock using HTML,CSS,JS.</p>
+        <a href="clock.html" class="btn">View</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: john@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-    <footer>
-        <p>&copy; 2023 John Doe. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Message sent! (demo only)");
+    });
+  </script>
 </body>
 </html>
