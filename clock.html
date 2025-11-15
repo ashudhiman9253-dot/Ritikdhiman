@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,34 +11,37 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: #1e1e1e;
-            color: #00ffcc;
+            background: #25d3284a;
+            color: #65e548;
             font-family: 'Courier New', Courier, monospace;
         }
-
+        
         .clock {
             text-align: center;
-            background: #13150b;
+            background: #7637d4;
             padding: 30px 50px;
             border-radius: 20px;
             box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
         }
-
+        
         #time {
             font-size: 60px;
             margin-bottom: 10px;
         }
-
+        
         #date {
             font-size: 24px;
         }
     </style>
 </head>
+
 <body>
     <div class="clock">
         <div id="time">00:00:00</div>
         <div id="date">Loading date...</div>
     </div>
+    <br><br>
+    <a href="index.html" class="back-link">Back to Portfolio</a>
 
     <script>
         function updateClock() {
@@ -58,7 +62,12 @@
             document.getElementById('time').textContent = timeString;
 
             // Display date
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
             const dateString = now.toLocaleDateString(undefined, options);
             document.getElementById('date').textContent = dateString;
         }
@@ -70,4 +79,5 @@
         updateClock();
     </script>
 </body>
+
 </html>
